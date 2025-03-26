@@ -9,7 +9,7 @@ function SelectYearMonth() {
 
   const handleSend = (e) => {
     e.preventDefault();     //prevent page refresh
-    fetch('${process.env.REACT_APP_API_URL}/process', {
+    fetch(`${import.meta.env.VITE_API_URL}/process`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

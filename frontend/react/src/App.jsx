@@ -6,7 +6,7 @@ function App() {
   const [msg, setMsg] = useState('');
 
   useEffect(() => {
-    fetch('${process.env.REACT_APP_API_URL}/api/message')
+    fetch(`${import.meta.env.VITE_API_URL}/api/message`)
       .then(res => res.json())
       .then(data => setMsg(data.message));
   }, []);
