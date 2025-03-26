@@ -9,7 +9,7 @@ function SelectYearMonth() {
 
   const handleSend = (e) => {
     e.preventDefault();     //prevent page refresh
-    fetch('http://localhost:5000/process', {
+    fetch('${process.env.REACT_APP_API_URL}/process', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

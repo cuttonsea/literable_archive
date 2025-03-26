@@ -3,7 +3,7 @@ import React from 'react';
 function DownloadFile({ filename }) {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `http://localhost:5000/download/${encodeURIComponent(filename)}`;
+    link.href = `${process.env.REACT_APP_API_URL}/download/${encodeURIComponent(filename)}`;
     link.download = filename;
     document.body.appendChild(link);
     link.click();
